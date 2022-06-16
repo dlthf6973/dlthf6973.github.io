@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호버효과</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+            font-weight: inherit;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+        }
+
+        section {
+            width: 400px;
+            height: 400px;
+            display: inline-block;
+            /* vertical-align: top; */
+            /* vertical-align => inline-block 포함되어 있는 경우 사용가능 (수직 정렬하는 기능) */
+        }
+
+        section figure {
+            width: 100%;
+            height: 100%;
+        }
+
+        section figure img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /**************************.items01**************************/
+        .items01 {
+            position: relative;
+        }
+
+        .items01 .info {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: aqua;
+            opacity: 0;
+            /* opacity는 투명도 조절 0~1 조절가능/ 0=> 0% 1=> 100% */
+            transition: 1s;
+
+        }
+
+        .items01 .info div {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            /* top: 50%;
+            left: 0;
+            transform: translateY(-50%); 
+            세로 정렬할때 쓰이는 공식*/
+            text-align: center;
+            padding: 20px;
+
+        }
+
+        .items01 .info div h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 7px;
+
+        }
+
+        .items01 .info div a {
+            display: block;
+            width: 120px;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
+            margin: 15px auto;
+            /* width 값이 있는경우 margin: 0 auto; 로 가운데 정렬을 할 수 있다 */
+        }
+
+        .items01:hover .info {
+            opacity: 1;
+            left: 20px;
+            top: 20px;
+        }
+
+        /**************************.items02 **************************/
+
+        .items02 {
+            position: relative;
+
+        }
+
+        .items02 .info {
+            z-index: -1;
+            /* 앞 뒤 위치 변경 기본값이 0 양수, 음수 사용가능 position이 있을 때만 사용가능
+            => 포지션 값이 없을 경우에는 position:relative; */
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 140, 0);
+            color: #fff;
+            text-align: center;
+        }
+
+        .items02 .info div {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 20px;
+        }
+
+        .items02 .info div a {
+            display: block;
+            width: 120px;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
+            margin: 10px auto;
+        }
+
+        .items02 .info div h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .items02:hover figure {
+            transform: translateY(-180px);
+            transition: 1s;
+        }
+
+        /**************************.items03 **************************/
+
+        .items03 {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .items03 figure {
+            position: relative;
+            z-index: 1;
+            transform: translateY(-35px);
+
+        }
+
+        .items03 figure img {
+            transform: scale(0.3);
+            transition: 1s;
+            /*  이미지 축소  */
+        }
+
+        .items03:hover figure img {
+            transform: scale(2);
+        }
+
+        .items03 .info {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: aquamarine;
+            text-align: center;
+        }
+
+        .items03 .info div {
+            position: absolute;
+            left: 0;
+            bottom: 20px;
+            padding: 0 20px;
+        }
+
+        .items03 .info div h4 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 7px;
+        }
+
+        .items03 .info div a {
+            display: block;
+            width: 120px;
+            padding: 10px 0;
+            background-color: #000;
+            color: #fff;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="items01">
+        <figure>
+            <img src="img/coffee01.jpg" alt="커피이미지" />
+        </figure>
+        <div class="info">
+            <div>
+                <h4>coffee - 1</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem explicabo dicta soluta autem
+                    accusamus, eveniet reprehenderit perspiciatis fugit ipsum libero.
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem explicabo dicta soluta autem
+                    accusamus, eveniet reprehenderit perspiciatis fugit ipsum libero.
+                </p>
+                <a href="#">button</a>
+            </div>
+        </div><!-- .info end -->
+    </section><!-- .items01 end -->
+
+    <section class="items02">
+        <figure>
+            <img src="img/coffee02.jpg" alt="커피이미지" />
+        </figure>
+        <div class="info">
+            <div>
+                <h4>coffee - 2</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem explicabo dicta soluta
+                </p>
+                <a href="#">button</a>
+            </div>
+        </div><!-- .info end -->
+    </section><!-- .items02 end -->
+
+    <section class="items03">
+        <figure>
+            <img src="img/coffee03.jpg" alt="커피이미지" />
+        </figure>
+        <div class="info">
+            <div>
+                <h4>coffee - 3</h4>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem explicabo dicta soluta autem
+                    accusamus, eveniet reprehenderit perspiciatis fugit ipsum libero.
+                </p>
+                <a href="#">button</a>
+            </div>
+        </div><!-- .info end -->
+    </section><!-- .items03 end -->
+</body>
+
+</html>
