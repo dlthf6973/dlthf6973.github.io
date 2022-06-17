@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>지도</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+            font-weight: inherit;
+            box-sizing: border-box;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        body {
+            line-height: 1;
+            color: #333;
+        }
+
+        .g_map {
+            max-width: 1280px;
+            width: 95%;
+            margin: 100px auto;
+        }
+
+        .g_map iframe {
+            width: 100%;
+        }
+
+        .g_map div h4 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .g_map div p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .g_map div ul {
+            display: inline-block;
+            margin: 30px 0 40px 0;
+        }
+
+        .g_map div li {
+            display: inline-block;
+        }
+
+        .g_map div ul li strong {
+            font-weight: bold;
+        }
+
+        .k_map {
+            background: url('img/city05.jpg') center center / cover;
+            /* 배경이미지 : 경로 x축위치 y축위치 / 사이즈  */
+            padding: 100px 0;
+            color: #fff;
+            background-attachment: fixed;
+            /* 이미지 고정 */
+        }
+
+        .k_map .inner {
+            max-width: 1280px;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        .k_map .inner div h4 {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .k_map .inner div p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .k_map .inner div ul {
+            display: inline-block;
+            margin: 30px 0 40px 0;
+        }
+
+        .k_map .inner div ul li {
+            display: inline-block;
+        }
+
+        .k_map .inner div ul li strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="g_map">
+        <div>
+            <h4>그린컴퓨터아카데미 부산점</h4>
+            <p>부산광역시 부산진구 부전동 중앙대로 688</p>
+            <ul>
+                <li><strong>Tel.</strong></li>
+                <li><a href="tel:051-000-0000">051-912-1000</a></li>
+            </ul>
+            <ul>
+                <li><strong>Fax.</strong></li>
+                <li>051-912-1000</li>
+            </ul>
+        </div>
+        <!-- 구글지도 -->
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13048.674036389717!2d129.04574745409434!3d35.152418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568eb70f147a9c9%3A0x5f8432a247bb69fa!2z6re466aw7Lu07ZOo7YSw7JWE7Lm0642w66-4IOu2gOyCsOy6oO2NvOyKpA!5e0!3m2!1sko!2skr!4v1655383025425!5m2!1sko!2skr"
+            width="1280" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section><!-- .g_map -->
+
+    <section class="k_map">
+        <div class="inner">
+            <div>
+                <h4>그린컴퓨터아카데미 부산점</h4>
+                <p>부산광역시 부산진구 부전동 중앙대로 688</p>
+                <ul>
+                    <li><strong>Tel.</strong></li>
+                    <li><a href="tel:051-000-0000">051-912-1000</a></li>
+                </ul>
+                <ul>
+                    <li><strong>Fax.</strong></li>
+                    <li>051-912-1000</li>
+                </ul>
+            </div>
+            <!--카카오 지도  -->
+            <!-- * 카카오맵 - 지도퍼가기 -->
+            <!-- 1. 지도 노드 -->
+            <div style="width: 100%;" id="daumRoughmapContainer1655462606770"
+                class="root_daum_roughmap root_daum_roughmap_landing"></div>
+
+            <!-- 2. 설치 스크립트-->
+            <!--* 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.-->
+            <script charset="UTF-8" class="daum_roughmap_loader_script"
+                src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+            <!-- 3. 실행 스크립트 -->
+            <script charset="UTF-8">
+                new daum.roughmap.Lander({
+                    "timestamp": "1655462606770",
+                    "key": "2anqu",
+                    // "mapWidth": "1280",
+                    "mapHeight": "400"
+                }).render();
+            </script>
+        </div><!-- .inner end -->
+    </section><!-- .k_map end -->
+</body>
+
+</html>
