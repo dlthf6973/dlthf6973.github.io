@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형_레이아웃 변화1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: inherit;
+            font-weight: inherit;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        body {
+            color: #333;
+            line-height: 1;
+        }
+
+        .cont01 {
+            max-width: 1280px;
+            width: 95%;
+            margin: 100px auto;
+        }
+
+        .cont01 h3 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .cont01 .cont {
+            display: flex;
+            justify-content: space-between;
+            /*             background-color: antiquewhite;*/
+        }
+
+        .cont01 .cont .items {
+            width: 24%;
+        }
+
+        .cont01 .cont .items div {
+            background-color: rgb(213, 168, 255);
+            padding: 15px;
+        }
+
+        .cont01 .cont .items img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .cont01 .cont .items h4 {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        /*  @media screen and (max-width:1280px) {
+            .cont01 {
+                width: 100%;
+            }
+        } .cont01 {
+            max-width: 1280px;
+            width: 100%; 로 수정함으로써 같은 효과를 줌    */
+
+        /* 뷰포트 767px 이하일 떄 스타일 적용 */
+        /* .items를 2개씩 2줄 만들기  */
+        /* https://hwebdew.github.io/html0601/ */
+        @media screen and (max-width:767px) {
+            .cont01 h3 {
+                font-size: 35px;
+            }
+
+            .cont01 .cont {
+                flex-wrap: wrap;
+            }
+
+            .cont01 .cont .items {
+                width: 49%;
+                margin-bottom: 20px;
+            }
+        }
+
+        /* 767px */
+        /* 뷰포트 414px 이하일 떄 스타일 적용 */
+        @media screen and (max-width:414px) {
+            .cont01 h3 {
+                font-size: 25px;
+            }
+
+            .cont01 .cont .items {
+                width: 100%;
+            }
+
+            .cont01 .cont .items h4 {
+                font-size: 18px;
+            }
+        }
+
+        /* 414px */
+    </style>
+</head>
+
+<body>
+    <section class="cont01">
+        <h3>반응형 레이아웃 변화</h3>
+        <div class="cont">
+            <div class="items">
+                <img src="img/음식1.jpg" alt="음식 이미지" />
+                <div>
+                    <h4>content title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae explicabo, excepturi omnis
+                        blanditiis quas sint ipsam minus rerum aspernatur mollitia sapiente obcaecati alias, placeat
+                        accusantium ducimus error nesciunt incidunt provident.</p>
+                </div>
+            </div><!-- .items end 1 -->
+            <div class="items">
+                <img src="img/음식2.jpg" alt="음식 이미지" />
+                <div>
+                    <h4>content title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae explicabo, excepturi omnis
+                        blanditiis quas sint ipsam minus rerum aspernatur mollitia sapiente obcaecati alias, placeat
+                        accusantium ducimus error nesciunt incidunt provident.</p>
+                </div>
+            </div><!-- .items end 2 -->
+            <div class="items">
+                <img src="img/음식3.jpg" alt="음식 이미지" />
+                <div>
+                    <h4>content title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae explicabo, excepturi omnis
+                        blanditiis quas sint ipsam minus rerum aspernatur mollitia sapiente obcaecati alias, placeat
+                        accusantium ducimus error nesciunt incidunt provident.</p>
+                </div>
+            </div><!-- .items end 3 -->
+            <div class="items">
+                <img src="img/cafe01.jpg" alt="음식 이미지" />
+                <div>
+                    <h4>content title</h4>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae explicabo, excepturi omnis
+                        blanditiis quas sint ipsam minus rerum aspernatur mollitia sapiente obcaecati alias, placeat
+                        accusantium ducimus error nesciunt incidunt provident.</p>
+                </div>
+            </div><!-- .items end 4 -->
+        </div><!-- .cont end -->
+    </section><!-- .cont01 end -->
+</body>
+
+</html>
