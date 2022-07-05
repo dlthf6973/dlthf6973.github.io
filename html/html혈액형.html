@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>태그 혈액형</title>
+    <style>
+        * {margin: 0;}
+        h1 {margin-top: 50px;}
+        h2 {
+            background-color: antiquewhite;
+            width: 400px;
+            height: 50px;
+            padding: 20px;
+            display: inline-block;
+            /*
+             display: flex;
+             display: block;
+             display: inline-block;
+             display: none;
+            */
+        }
+        p{
+            display: inline-block;
+            background-color: rgb(199, 205, 255);
+        }
+        strong {
+            background-color: aqua;
+            width: 400px;
+            height: 50px;
+            padding: 20px;
+            display: inline-block;
+            /* 인라인의 가로나열 + 블록의 크기조절 = inline-block */
+            /* display:block => 크기조절, 세로나열 */
+        }
+    </style>
+</head>
+<body>
+    <h1>블럭요소(block) : 너비 전체를 가진다.</h1>
+    <h2>타이틀태그h1 ~ h6</h2>
+    <p>텍스트 태그 p태그</p>
+    <ul>
+        <li>리스트 태그 ul li</li>
+    </ul>
+    <ol>
+        <li>순서있는 리스트 태그 ol li</li>
+    </ol>
+    <div>그룹화 시켜주는 태그 div</div>
+    <p>시멘틱 태그 : section, header, nav, aside(퀵메뉴들), footer 등등..</p>
+    <!-- 블럭요소(block) 정리 끝 -->
+
+    <h1>인라인요소(inline) : 본인의 영역만 가진다.</h1>
+    <strong>글자 굵게 표현하면서 강조하는 태그 strong</strong>
+    <b>글자 굵게 표현하는 태그 b</b>
+    <em>이탤릭체로 표현하면서 강조하는 태그 em</em>
+    <i>이탤릭체로 표현하는 태그 i</i>
+    <span>내용을 분리, 스타일을 묶어줄 때 사용 span</span>
+    <a href="#">링크 태그 a</a>
+    <!-- 인라인요소(inline) 정리 끝 -->
+
+    <!-- 
+        블록태그안에 인라인 태그 적용 가능
+        예시 => <p>p태그 안에 <strong>스트롱태그</strong></p>
+
+        *인라인태그안에는 블록태그 적용 불가능
+        예시 => <span><div>안들어가져용!</div></span>
+
+        예외!!!! a태그(인라인태그)
+        a태그안에 블록태그 적용 가능 (html5 부터 가능!!!)
+        예시 => <a href=""><div></div></a>
+     -->
+</body>
+</html>
